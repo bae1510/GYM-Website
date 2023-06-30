@@ -1,0 +1,39 @@
+.container{
+    font-weight: bold;
+    font-size: 30px;
+    /* margin-top: 10rem;
+    padding: 5rem;
+    margin-left: 2rem; */
+   color: rgb(255, 255, 255);
+   position: relative;
+   top: 13rem;
+   left: 9rem;
+
+}
+.back{
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/120/745/199/look-girl-pose-sport-wallpaper-preview.jpg");
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.red{
+    color: red;
+}
+.btn{
+    position: relative;
+    top: 15rem;
+    left: 9rem;
+    width: 7vw;
+    height: 5vh;
+   border-radius: 0.5rem;
+   border: none;
+   font-weight: bold;
+   color: white;
+   background-color: red;
+}
+.btn:hover{
+    box-shadow: 0 0 10px 2px #d2b2b2;
+}
