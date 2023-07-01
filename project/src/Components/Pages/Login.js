@@ -1,9 +1,78 @@
-import React from 'react'
+import React, { useState } from 'react';
+import styles from './Login.module.css'
 
-function Login() {
+
+export default function App() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  function handleEmailChange(e) {
+    setEmail(e.target.value);
+  }
+
+  function handlePasswordChange(e) {
+    setPassword(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    // Email validation
+    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+    if (!emailRegex.test(email)) {
+      alert('Invalid email address');
+      return;
+    }
+
+    // Password validation
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+    if (!passwordRegex.test(password)) {
+      alert(
+        'Invalid password. It should contain at least 6 characters, including at least one uppercase letter, one lowercase letter, and one digit.'
+      );
+      return;
+    }
+
+    // Authentication logic
+    localStorage.setItem('Email', email);
+    localStorage.setItem('Password', password);
+    setEmail('');
+    setPassword('');
+    alert('Login successful!');
+  }
+
   return (
-    <div>Login</div>
-  )
+    <div className={styles.container}>
+    <h2>Login</h2>
+      <form onSubmit={handleSubmit} >
+        <label>
+        
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={handleEmailChange}
+            className={styles.input}
+          />
+        </label>
+        <br />
+        <br />
+        <label>
+         
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={handlePasswordChange}
+            className={styles.input}
+          />
+        </label>
+        <br />
+        <br />
+        <div>
+          <button className={styles.button} type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  );
 }
-
-export default Login

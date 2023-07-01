@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 // import { Link } from 'react-scroll';
 // import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import { useRef } from 'react';
 const nav=[
@@ -27,6 +28,11 @@ const nav=[
 ];
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  function handleRegistration(){
+    navigate('/login');
+  }
   const headerRef = useRef(null)
   const headerFunction = () =>{
     if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
@@ -72,11 +78,12 @@ const Navbar = () => {
         </ul>
       </div>
       <div>
-        <button className={styles.btn}>Join Us</button>
+        <button className={styles.btn} onClick={handleRegistration}>Join Us</button>
       </div>
       </div>
 
     </div> 
+  
     </header>
   );  
 };

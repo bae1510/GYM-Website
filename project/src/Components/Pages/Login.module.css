@@ -1,0 +1,60 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  } */
+
+  .container{
+    background-color: #871a1a;
+    padding: 30px 120px;
+    width: 20%;
+    position: absolute;
+    /* top: 0.5%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10px;
+  }
+  .container h2{
+    color: white;
+  }
+
+  /* .logoBox{
+    background: #871a1a;
+    padding: 30px 120px;
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10px;
+  } */
+  .input {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #999;
+    outline: 0;
+    padding: 15px 10px;
+    border-radius: 4px;
+    background-color: white;
+  }
+  ::placeholder {
+    font-weight: 500;
+    color: #333;
+  }
+.button{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid #999;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: white;
+  }

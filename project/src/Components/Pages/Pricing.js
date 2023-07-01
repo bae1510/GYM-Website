@@ -1,11 +1,135 @@
 import React from 'react'
+import styles from './Pricing.module.css'
 
 function Pricing() {
+
+
+  function handleClick(){
+    alert("Thank you for Choosing us");
+  }
+
+  function handleJoin(){
+    alert("Thank you for Joining us")
+  }
+
   return (
     <div id="pricing" >
-    <h1>Pricingggg</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
+      <div className={styles.container}>
+        <div className={styles.pricingTop}>
+          <h2 >
+            Gym Pricing Plan
+          </h2>
+          </div>
+          {/* ======Princing wrapper======== */}
+
+          <div className={styles.pricingWrapper}>
+            <div className={styles.pricingItem}>
+              <div className={styles.pricingCardTop}>
+                <h3 className={styles.sectionTitle}>Regular Member</h3>
+                <h3 className={styles.pricing}> $50 <span>/month</span></h3>
+
+              </div>
+
+              <div className={styles.services}>
+                <ul>
+                  <li><span><i class="ri-checkbox-blank-circle-fill"></i>
+                  </span>Unlimited access to the gym</li>
+
+                  <li><span>
+                    <i class="ri-checkbox-blank-circle-fill"></i>
+                  </span> Customer support</li>
+
+                  <li><span>
+                    <i class="ri-checkbox-blank-circle-fill"></i>
+                  </span>Personal trainer</li>
+
+                  <li><span>
+                    <i class="ri-checkbox-blank-circle-fill"></i>
+                  </span>standard optains</li>
+
+                  <li><span>
+                    <i class="ri-checkbox-blank-circle-fill"></i>
+                  </span>5 classes per Week</li>
+                </ul>
+                <button className={styles.registerBtn} onClick={handleClick}>Choose</button>
+
+              </div>
+
+            </div>
+
+            <div className={styles.pricingItem02}>
+              <div className={styles.pricingCardTop}>
+                <h3 className={styles.sectionTitle}>Primium Member</h3>
+                <h3 className={styles.pricing}> $150 <span>/month</span></h3>
+
+              </div>
+
+              <div className={styles.services}>
+                <ul>
+                  <li><span><i class="ri-checkbox-blank-circle-fill"></i>
+                  </span>Unlimited access to the gym</li>
+
+                  <li><span>
+                    <i class="ri-checkbox-blank-circle-fill"></i>
+                  </span> Customer support</li>
+
+                  <li><span>
+                    <i class="ri-checkbox-blank-circle-fill"></i>
+                  </span>Personal trainer</li>
+
+                  <li><span>
+                    <i class="ri-checkbox-blank-circle-fill"></i>
+                  </span>standard optains</li>
+
+                  <li><span>
+                    <i class="ri-checkbox-blank-circle-fill"></i>
+                  </span>5 classes per Week</li>
+                </ul>
+                <button className={styles.registerBtn} onClick={handleJoin}>Join Us</button>
+
+              </div>
+
+            </div>
+
+            <div className={styles.pricingItem03}>
+              <div className={styles.pricingCardTop}>
+                <h3 className={styles.sectionTitle}>Standard Member</h3>
+                <h3 className={styles.pricing}> $500 <span>/month</span></h3>
+
+              </div>
+
+              <div className={styles.services}>
+                <ul>
+                  <li><span><i class="ri-checkbox-blank-circle-fill"></i>
+                  </span>Unlimited access to the gym</li>
+
+                  <li><span>
+                    <i class="ri-checkbox-blank-circle-fill"></i>
+                  </span> Customer support</li>
+
+                  <li><span>
+                    <i class="ri-checkbox-blank-circle-fill"></i>
+                  </span>Personal trainer</li>
+
+                  <li><span>
+                    <i class="ri-checkbox-blank-circle-fill"></i>
+                  </span>standard optains</li>
+
+                  <li><span>
+                    <i class="ri-checkbox-blank-circle-fill"></i>
+                  </span>5 classes per Week</li>
+                </ul>
+                <button className={styles.registerBtn} onClick={handleClick}>Choose</button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+   
   )
 }
 
