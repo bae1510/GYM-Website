@@ -1,7 +1,13 @@
 import React from 'react'
 import styles from './HeroSection.module.css'
+import { useNavigate } from 'react-router-dom'
 
 export default function HeroSection() {
+  const navigate=useNavigate()
+
+  function handleClick(){
+    navigate('/registration')
+  }
   return (
     <div className={styles.back} id='home'>
     <div className={styles.container}>
@@ -12,7 +18,7 @@ export default function HeroSection() {
   
     </div>
     <div >
-        <button className={styles.btn}>Join with Us</button>
+        <button className={styles.btn} onClick={handleClick}>Join with Us</button>
     </div>
     </div>
   )

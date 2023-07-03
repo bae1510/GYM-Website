@@ -1,0 +1,33 @@
+ .heading {
+    color: #862828;
+    font-size: 3.9rem;
+    font-style: oblique;
+  }
+ 
+  .container{
+    position: relative;
+    left: 40%;
+    margin-top: 10rem;
+    width: 50%;
+    margin-bottom: 25rem;
+    margin-top: 2rem;
+   
+  }
+  .about{
+   font-weight: bold;
+  }
+  .video{
+    position: absolute;
+    top: 110%;
+    left: 2%;
+  }
+  .btn {
+    background-color: #862828;
+    color: whitesmoke;
+    height: 5.5vh;
+    width: 8vw;
+    border-radius: 0.5rem;
+    border: none;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+  }

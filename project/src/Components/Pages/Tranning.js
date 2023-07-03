@@ -124,7 +124,7 @@ export default function Tranning() {
 function TrainerCard({ trainer, speciality, imgUrl, bio, onClick }) {
   return (
     <div className={style.cardOutline}>
-      <img className={style.card} src={imgUrl}></img>
+      <img className={style.card} src={imgUrl} alt="notImg"></img>
       <div className={style.cardFoot}>
         <div className={style.nameSection}>
           <div>{trainer}</div>

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import styles from "./Registration.module.css";
+import { useNavigate } from "react-router-dom";
 export default function Registration() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
 
   function handleName(event) {
     setName(event.target.value);
@@ -62,10 +64,20 @@ export default function Registration() {
   }
 
   function isValidEmail(email) {
-    // Regular expression for email validation
     const emailRegex =
       /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
     return emailRegex.test(email);
+  }
+  // const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+  // if (!passwordRegex.test(password)) {
+  //   alert(
+  //     'Invalid password. It should contain at least 6 characters, including at least one uppercase letter, one lowercase letter, and one digit.'
+  //   );
+  //   return;
+  // }
+
+  function handleLogin(){
+    navigate('/login')
   }
 
   return (
@@ -116,7 +128,7 @@ export default function Registration() {
         <button onClick={handleClick} className={styles.button}>Register</button>
       </div>
       <div>
-        <h3>Already have an account?</h3>
+        <h3>Already have an account?<span onClick={handleLogin}>Login</span></h3>
       </div>
     </div>
   );
